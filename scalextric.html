@@ -45,7 +45,8 @@
     <p>hello</p>
 
     <!-- Throttle Slider -->
-    <form action="Throttlereport.php" method="POST" id="Throttle">
+    <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
+    <form action="Throttlereport.php" method="POST" id="Throttle" target="dummyframe">
         <div class="slidecontainer">
             <label for="throttle">Throttle</label>
             <input type="range" min="0" max="100" value="0" step="5" class="slider" id="foo" name="passengers" onchange='document.getElementById("bar").value = "Slider Value = " + document.getElementById("foo").value;'>
@@ -57,12 +58,12 @@
     <script>
         var slider = document.getElementById("Throttle");
         slider.onmouseup = function () {
-            document.getElementById("Throttle").submit();
+        document.getElementById("Throttle").submit();
         }
     </script>
 
 
-    
+
 
 
 </body>
