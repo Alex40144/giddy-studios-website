@@ -60,10 +60,7 @@
 
     <script>
         var slider = document.getElementById("Throttle");
-        slider.onmouseup = function () {
-        document.getElementById("Throttle").submit();
-        }
-        slider.ontouchend = function () {
+        slider.onpointerup = function () {
         document.getElementById("Throttle").submit();
         }
     </script>
