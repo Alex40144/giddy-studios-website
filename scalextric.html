@@ -45,32 +45,18 @@
     <p>hello</p>
 
     <!-- Throttle Slider -->
-    <form>
+    <form action="Throttlereport.php" method="POST">
         <div class="slidecontainer">
             <label for="throttle">Throttle</label>
-            <input type="range" min="20" max="120" value="0" step="5" class="slider" id="myRange" name="slider1">
+            <input type="range" min="0" max="100" value="0" step="5" class="slider" id="foo" name="passengers" onchange='document.getElementById("bar").value = "Slider Value = " + document.getElementById("foo").value;'>
+            <input type="text" name="bar" id="bar" value="Slider Value = 1" disabled />
+            <input type=submit value=Submit />
         </div>
     </form>
-    <p>Value: <span id="demo"></span></p>
-    <script>
-        var slider = document.getElementById("myRange");
-        var output = document.getElementById("demo");
-        output.innerHTML = slider.value; // Display the default slider value
 
-        // Update the current slider value (each time you drag the slider handle)
-        slider.oninput = function () {
-            output.innerHTML = this.value - 20;
-        }
-    </script>
+
+    
+
 
 </body>
 </html>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-150931831-3"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'UA-150931831-3');
-</script>
