@@ -48,9 +48,7 @@
     <form action="Throttlereport.php" method="POST">
         <div class="slidecontainer">
             <label for="throttle">Throttle</label>
-            <input type="range" min="0" max="100" value="0" step="5" class="slider" id="foo" name="passengers" onchange='document.getElementById("bar").value = "Slider Value = " + document.getElementById("foo").value;'>
-            <input type="text" name="bar" id="bar" value="Slider Value = 1" disabled />
-            <input type=submit value=Submit />
+            <input type="range" min="0" max="100" value="0" step="5" class="slider" id="foo" name="passengers" onchange='document.getElementById("form").submit()'>
         </div>
     </form>
 
