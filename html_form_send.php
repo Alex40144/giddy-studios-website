@@ -1,7 +1,7 @@
 
 <?php
 
-  $to = "yourname@yourwebsite.com";
+  $to = "alex.pegg@giddystudios.net";
 
   $headers = "From: $email_from \r\n";
 
