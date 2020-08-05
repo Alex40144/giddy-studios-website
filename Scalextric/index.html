@@ -1,67 +1,105 @@
+<!-- Made By Alex -->
 <!DOCTYPE html>
 <html>
-<style>
-    .slidecontainer {
-        width: 100%; /* Width of the outside container */
-    }
+<title>Giddy Studios</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    /* The slider itself */
-    .slider {
-        -webkit-appearance: none; /* Override default CSS styles */
-        appearance: none;
-        width: 100%; /* Full-width */
-        height: 25px; /* Specified height */
-        background: #d3d3d3; /* Grey background */
-        outline: none; /* Remove outline */
-        opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
-        -webkit-transition: .2s; /* 0.2 seconds transition on hover */
-        transition: opacity .2s;
-    }
+<link rel="stylesheet" href="../style.css">
 
-        /* Mouse-over effects */
-        .slider:hover {
-            opacity: 1; /* Fully shown on mouse-over */
-        }
+<link rel="shortcut icon" type="image/x-icon" href="./images/favicon.ico"/>
 
-        /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
-        .slider::-webkit-slider-thumb {
-            -webkit-appearance: none; /* Override default look */
-            appearance: none;
-            width: 25px; /* Set a specific slider handle width */
-            height: 25px; /* Slider handle height */
-            background: #4CAF50; /* Green background */
-            cursor: pointer; /* Cursor on hover */
-        }
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-150931831-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-        .slider::-moz-range-thumb {
-            width: 25px; /* Set a specific slider handle width */
-            height: 25px; /* Slider handle height */
-            background: #4CAF50; /* Green background */
-            cursor: pointer; /* Cursor on hover */
-        }
-    .hide {
-        display: none;
-    }
-</style>
+  gtag('config', 'UA-150931831-1');
+</script>
+
+<meta charset="UTF-8"> 
+<meta name="description" content="Portfolio for all of my projects"> 
+<meta name="keywords" content=""> 
+
 <body>
 
-    <h1>Scalextric</h1>
-    <p>This is a real car in the real world</p>
-    <!-- Throttle Slider -->
-    <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
-    <form action="Throttlereport.php" method="POST" id="Throttle" target="dummyframe">
-        <div class="slidecontainer">
-            <label for="throttle">Throttle</label>
-            <input type="range" min="0" max="100" value="0" step="5" class="slider" id="foo" name="passengers" onchange='document.getElementById("bar").value = "Slider Value = " + document.getElementById("foo").value;'>
-            <input class="hide" type="text" name="bar" id="bar" value="Slider Value = 1" disabled />
-            <input class="hide" type=submit value=Submit />
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+        <div class="w3-bar" id="myNavbar">
+            <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+                <i class="fa fa-bars"></i>
+            </a>
+            <a href="../index.html#home" class="w3-bar-item w3-button">HOME</a>
+            <a href="../index.html#projects" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> Projects</a>
+            <a href="../index.html#blog" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> Blog</a>
+            <a href="../index.html#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> Contact</a>
+            <a href="index.html#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+            </a>
         </div>
-    </form>
+
+        <!-- Navbar on small screens -->
+        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+            <a href="../index.html#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> About Us</a>
+            <a href="../index.html#projects" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> Projects</a>
+            <a href="../index.html#blog" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> Blog</a>
+            <a href="../index.html#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> Contact</a>
+        </div>
+    </div>
+
+    <p style="margin-left: 2.5em;padding: 0 7em 2em 0;"></p>
+
+    <!-- First Parallax Image with Logo Text -->
+    <div class="parallax w3-display-container w3-opacity-min" id="home">
+        <div class="w3-display-middle" style="white-space:nowrap;">
+            <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">GIDDY  <span class="w3-hide-small"></span>STUDIOS</span>
+        </div>
+    </div>
+
+    <!-- Container (Put stuff here) -->
+    <div class="w3-content w3-container w3-padding-64" id="about">
+        <h3 class="w3-center">Internet Connected Scalextric</h3>
+        <p class="w3-center"><em>control your Scalextric through the internet</em></p>
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+        <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+        <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+    </footer>
 
     <script>
-        var slider = document.getElementById("Throttle");
-        slider.onpointerup = function () {
-        document.getElementById("Throttle").submit();
+        // Modal Image Gallery
+        function onClick(element) {
+            document.getElementById("img01").src = element.src;
+            document.getElementById("modal01").style.display = "block";
+            var captionText = document.getElementById("caption");
+            captionText.innerHTML = element.alt;
+        }
+
+        // Change style of navbar on scroll
+        window.onscroll = function () { myFunction() };
+        function myFunction() {
+            var navbar = document.getElementById("myNavbar");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+            } else {
+                navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+            }
+        }
+
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function toggleFunction() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
         }
     </script>
 </body>
