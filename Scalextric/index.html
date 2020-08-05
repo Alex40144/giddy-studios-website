@@ -62,7 +62,91 @@
     <div class="w3-content w3-container w3-padding-64" id="about">
         <h3 class="w3-center">Internet Connected Scalextric</h3>
         <p class="w3-center"><em>control your Scalextric through the internet</em></p>
+        <img src="../images/play-now.png" onclick="location.href='../Scalextric/play.html'" class="image-center w3-hover-opacity">
     </div>
+
+    <!-- Parallax Image -->
+    <div class="parallax w3-display-container w3-opacity-min" id="overview">
+        <div class="w3-display-middle" style="white-space:nowrap;">
+            <span class="w3-xxlarge w3-text-white w3-wide">Overview</span>
+        </div>
+    </div>
+
+    <!-- Container (Put stuff here) -->
+    <div class="w3-content w3-container w3-padding-64">
+        <p class="w3-center">
+            The projcet came to life during the lockdown adveture of 2020. I wanted to race my friends at Scalextric, but they needed to be in the same room as me to do that. 
+            So I devised a plan to connect the cars to the internet. Overall I think the project went quite well, but due to the intensity of the racing, the delay over the internet 
+            made it unplayable.
+        </p>
+    </div>
+
+    <!-- Parallax Image -->
+    <div class="parallax w3-display-container w3-opacity-min" id="walk-through">
+        <div class="w3-display-middle" style="white-space:nowrap;">
+            <span class="w3-xxlarge w3-text-white w3-wide">Walk through</span>
+        </div>
+    </div>
+    <!-- Container (Put stuff here) -->
+    <div class="w3-content w3-container w3-padding-64">
+        <p class="w3-center">
+            The first part of the plan was to be able to control the car from the raspberry pi. my first idea to do this was to hard wire into the 
+            controller and pretent to be the controller. but upon opening the controller there was a variable resistor to contend with. 
+            I probably could of worked out how to use a digital potentiometer, but I went for the more fun way of connecting a servo the the 
+            linear track of the resistor, so I could move it with the Pi.
+        </p>
+        <img src="../images/scalextric-controller.jpg"  style="width:20%;height:auto">
+        <img src="../images/controller-moving.gif"  style="width:24%;height:auto">
+        <p class="w3-center">
+            The next step was to be able to control it from a website. I began by making some sliders, so the player can give the throttle a value from 0 to 100 
+            quickly and easily. Then using some php I saved that value to a text file on my server. Now when I moved the slider I could see the text file changing.
+            <br><br>
+            Now I needed to get this value onto the Raspberry Pi, the first method I tried was using sockets. This means that the server is constantly sending the value 
+            to the Pi. Then with this value the servo can be moved. This solution worked well, minimal input lag (approx 0.5s) but I was having issues when turning on the 
+            system as I would have to restart the server script for some reason.
+            <br><br>
+            This lead onto the next solution which involved using the website to capture the throttle value. With the Pi I made a request to the server for the data.txt file. 
+            This would give me a text file with the throttle value in it. This was much simpler than the sockets as it only required a single script to operate and had no 
+            issues when restarting. The only downside being that this added about 1 second to the input lag, making the car quite difficult to control. This is the current 
+            solution, an will probobly be staying until someone has a better idea.
+        </p>
+        <h1 class=w3-center>
+            need a video of the cars going round
+        </h1>
+    </div>
+
+        <!-- Parallax Image -->
+        <div class="parallax w3-display-container w3-opacity-min" id="open-source">
+            <div class="w3-display-middle" style="white-space:nowrap;">
+                <span class="w3-xxlarge w3-text-white w3-wide">Open Source</span>
+            </div>
+        </div>
+        <!-- Container (Put stuff here) -->
+        <div class="w3-content w3-container w3-padding-64" id="about">
+            <p class="w3-center">
+                As always, my projects are open source, so please take them, modify and improve them and share them with your friends 
+                to prove you are the better friend
+            </p>
+            <h3 class="w3-center">
+                Here's the code, couldn't be bothered to put it on Github as there isn't much of it
+            </h3>
+            <pre style='color:#000000;background:#ffffff;'><span style='color:#800000; font-weight:bold; '>import</span> time
+                <span style='color:#800000; font-weight:bold; '>import</span> requests
+                <span style='color:#800000; font-weight:bold; '>from</span> adafruit_servokit <span style='color:#800000; font-weight:bold; '>import</span> ServoKit
+                
+                kit <span style='color:#808030; '>=</span> ServoKit<span style='color:#808030; '>(</span>channels<span style='color:#808030; '>=</span><span style='color:#008c00; '>16</span><span style='color:#808030; '>)</span>
+                url <span style='color:#808030; '>=</span> <span style='color:#0000e6; '>'https://www.giddystudios.net/data.txt'</span>
+                
+                <span style='color:#800000; font-weight:bold; '>while</span> <span style='color:#074726; '>True</span><span style='color:#808030; '>:</span>
+                        data <span style='color:#808030; '>=</span> requests<span style='color:#808030; '>.</span>get<span style='color:#808030; '>(</span>url<span style='color:#808030; '>)</span>
+                        data <span style='color:#808030; '>=</span> data<span style='color:#808030; '>.</span>text
+                        <span style='color:#800000; font-weight:bold; '>print</span><span style='color:#808030; '>(</span>data<span style='color:#808030; '>)</span>
+                        kit<span style='color:#808030; '>.</span>servo<span style='color:#808030; '>[</span><span style='color:#008c00; '>0</span><span style='color:#808030; '>]</span><span style='color:#808030; '>.</span>angle <span style='color:#808030; '>=</span> <span style='color:#400000; '>int</span><span style='color:#808030; '>(</span>data<span style='color:#808030; '>)</span> <span style='color:#44aadd; '>+</span><span style='color:#008c00; '>20</span>
+                
+                </pre>
+                <!--Created using ToHtml.com on 2020-08-05 13:36:09 UTC -->
+            <h3 class="w3-center"><a href="https://github.com/Alex40144/">Find me on Github</a></h3>
+        </div>
 
     <!-- Footer -->
     <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
