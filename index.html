@@ -60,7 +60,7 @@
 
     <!-- Container (About Section) -->
     <div class="w3-content w3-container w3-padding-64" id="about">
-        <h3 class="w3-center">ABOUT ME</h3>
+        <h2 class="w3-center">About Myself</h3>
         <p class="w3-center">
             Well, I'm a lone soldier in the fight against the Computer. I mainly code in Python, but from this website, you can probably tell that I can also code in html. 
             I am also trying yo get into making games with SFML,we will see how that goes. 
@@ -95,41 +95,35 @@
     </div>
 
     <!-- Container (Portfolio Section) -->
-    <div class="w3-content w3-container w3-padding-64">
-        <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
-        <div class="w3-row-padding w3-center">
-            <div class="w3-col m3">
-                <img src="./images/scalextric.jpg" style="width:100%" onclick="location.href='./Scalextric'" class="w3-hover-opacity" alt="Scalextric">
+    <div class="row">
+        <div class="leftblogcolumn">
+            <div class="card">
+                <h2 onclick="location.href='./Scalextric'" class="w3-hover-opacity">Internet connected Scalextric</h2>
+                <img src="./images/scalextric.jpg" style="height: 200px" onclick="location.href='./Scalextric'" class="w3-hover-opacity" alt="Scalextric">
             </div>
 
-            <div class="w3-col m3">
-                <img src="./images/Text-Adventure.png" style="width:100%" onclick="location.href='./Text-Adventure'" class="w3-hover-opacity" alt="">
+            <div class="card">
+                <h2 onclick="location.href='./Text-Adventure'" class="w3-hover-opacity">Text Adventure Game</h2>
+                <img src="./images/Text-Adventure.png" style="height: 200px" onclick="location.href='./Text-Adventure'" class="w3-hover-opacity" alt="">
             </div>
 
-            <div class="w3-col m3">
-                <img src="./images/LED-Clock.jpg" style="width:100%" onclick="location.href='./LED-Clock'" class="w3-hover-opacity" alt="">
-            </div>
-
-            <div class="w3-col m3">
-                <img src="./images/4.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="">
+            <div class="card">
+                <h2 onclick="location.href='./LED-Clock'" class="w3-hover-opacity">LED Clock</h2>
+                <img src="./images/LED-Clock.jpg" style="height: 200px" onclick="location.href='./LED-Clock'" class="w3-hover-opacity" alt="">
             </div>
         </div>
-
-        <div class="w3-row-padding w3-center w3-section">
-            <div class="w3-col m3">
-                <img src="./images/5.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="">
-            </div>
-
-            <div class="w3-col m3">
-                <img src="./images/6.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="">
-            </div>
-
-            <div class="w3-col m3">
-                <img src="./images/7.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="">
-            </div>
-
-            <div class="w3-col m3">
-                <img src="./images/8.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="">
+        <div class="rightblogcolumn">
+            <div class="card">
+                <h2> Blog Posts</h2>
+                <div class="subcard">
+                    <h3> Post 1</h3>
+                </div>
+                <div class="subcard">
+                    <h3> Post 2</h3>
+                </div>
+                <div class="subcard">
+                    <h3> Post 3</h3>
+                </div>
             </div>
         </div>
     </div>
