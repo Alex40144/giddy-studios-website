@@ -47,17 +47,67 @@
 
     <!-- Container (Put stuff here) -->
     <div class="w3-content w3-container w3-padding-64">
-        <h2 class="w3-center">Title</h2>
-        <p class="w3-center">Synopsis</p>
+        <h2 class="w3-center">Creating and Managing Virtual Enviroments in Python</h2>
+        <p class="w3-center">A simple method to creating virtual environments for your python projects.</p>
     </div>
 
     <div class="row">
         <div class="leftblogcolumn">
             <div class="card">
                 <h2> Overview </h2>
+                <p>
+                    Python environments are collections of packages to put it simply.
+                    You will have one python environment that contains all the packages you have installed.
+                    Virtual environments allow you to have multiple differnt environemnts for your project.
+                    This allows you to run python 3 and python 2 projects, easily switching between the two.
+                    Also, this gives you the ability to have two different versions of the same package, keeping them
+                    separate for each project.
+                </p>
+            </div>
+            <div class="card">
+                <h2> Installing </h2>
+                <p>
+                    This couldn't be any simpler, just install VirtualEnv with pip!
+                </p>
+                <div class="codeblock">
+                    <p> pip install virtualenvwrapper </p>
+                </div>
+                <p>
+                    I am using the wrapper version to ease the process of creating and changing environemnts.
+                </p>
+            </div>
+            <div class="card">
+                <h2> Managing </h2>
+                <p>There are a few main instructions that you need to learn to use this.</p>
+                <p> The first is creating a new virtual environment.</p>
+                <div class="codeblock">
+                    <p> mkvirtualenv [name]</p>
+                </div>
+                <p>We can also remove virtual environments</p>
+                <div class="codeblock">
+                    <p>rmvirtualenv [name]</p>
+                </div>
+                <p>We can show a list of virtual environments</p>
+                <div class="codeblock">
+                    <p>lsvirtualenv</p>
+                </div>
+            </div>
+            <div class="card">
+                <h2>Using</h2>
+                <p>To start working in a virtual environment use the following command</p>
+                <div class="codeblock">
+                    <p>workon [name]</p>
+                </div>
+                <p> Lastly, to exit out of an environment, use:</p>
+                <div class="codeblock">
+                    <p>deactivate</p>
+                </div>
             </div>
             <div class="card">
                 <h2>Conclusion</h2>
+                <p>
+                    Virtual environemnts are easy to get up and running, and make development across versions much easier.
+                </p>
             </div>
         </div>
         <div class="rightblogcolumn">
