@@ -8,9 +8,9 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 
-<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="/style.css">
 
-<link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico"/>
+<link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico"/>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script data-ad-client="ca-pub-7335793688887222" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -88,87 +88,100 @@
             one file, the enemies in another, and the main game loop elsewhere. This helps me understand the code better as long files just 
             get confusing.
         </p>
-        <p class="w3-center">
-            <pre style='color:#000000;background:#ffffff;'><span style='color:#800000; font-weight:bold; '>while</span> player<span style='color:#808030; '>.</span>is_alive<span style='color:#808030; '>(</span><span style='color:#808030; '>)</span> <span style='color:#800000; font-weight:bold; '>and</span> <span style='color:#800000; font-weight:bold; '>not</span> player<span style='color:#808030; '>.</span>victory<span style='color:#808030; '>:</span>
-                room <span style='color:#808030; '>=</span> world<span style='color:#808030; '>.</span>get_tile<span style='color:#808030; '>(</span>player<span style='color:#808030; '>.</span>location_x<span style='color:#808030; '>,</span> player<span style='color:#808030; '>.</span>location_y<span style='color:#808030; '>)</span>
-                room<span style='color:#808030; '>.</span>modify_player<span style='color:#808030; '>(</span>player<span style='color:#808030; '>)</span>
-                <span style='color:#800000; font-weight:bold; '>if</span> player<span style='color:#808030; '>.</span>is_alive<span style='color:#808030; '>(</span><span style='color:#808030; '>)</span> <span style='color:#800000; font-weight:bold; '>and</span> <span style='color:#800000; font-weight:bold; '>not</span> player<span style='color:#808030; '>.</span>victory<span style='color:#808030; '>:</span>
-                    time<span style='color:#808030; '>.</span>sleep<span style='color:#808030; '>(</span><span style='color:#008c00; '>2</span><span style='color:#808030; '>)</span>
-                    <span style='color:#800000; font-weight:bold; '>print</span><span style='color:#808030; '>(</span><span style='color:#0000e6; '>"</span><span style='color:#0f69ff; '>\n</span><span style='color:#0000e6; '>===========================================</span><span style='color:#0f69ff; '>\n</span><span style='color:#0000e6; '>Choose an action:</span><span style='color:#0f69ff; '>\n</span><span style='color:#0000e6; '>"</span><span style='color:#808030; '>)</span>
-                    available_actions <span style='color:#808030; '>=</span> room<span style='color:#808030; '>.</span>available_actions<span style='color:#808030; '>(</span><span style='color:#808030; '>)</span>
-                    <span style='color:#800000; font-weight:bold; '>for</span> action <span style='color:#800000; font-weight:bold; '>in</span> available_actions<span style='color:#808030; '>:</span>
-                        <span style='color:#800000; font-weight:bold; '>print</span><span style='color:#808030; '>(</span>action<span style='color:#808030; '>)</span>
-                    action_input <span style='color:#808030; '>=</span> <span style='color:#400000; '>input</span><span style='color:#808030; '>(</span><span style='color:#0000e6; '>'Action: '</span><span style='color:#808030; '>)</span>
-                    <span style='color:#800000; font-weight:bold; '>print</span><span style='color:#808030; '>(</span><span style='color:#0000e6; '>"</span><span style='color:#0f69ff; '>\n</span><span style='color:#0f69ff; '>\n</span><span style='color:#0f69ff; '>\n</span><span style='color:#0f69ff; '>\n</span><span style='color:#0f69ff; '>\n</span><span style='color:#0f69ff; '>\n</span><span style='color:#0f69ff; '>\n</span><span style='color:#0000e6; '>"</span><span style='color:#808030; '>)</span>
-                    <span style='color:#800000; font-weight:bold; '>for</span> action <span style='color:#800000; font-weight:bold; '>in</span> available_actions<span style='color:#808030; '>:</span>
-                        <span style='color:#800000; font-weight:bold; '>if</span> action_input <span style='color:#44aadd; '>==</span> action<span style='color:#808030; '>.</span>hotkey<span style='color:#808030; '>:</span>
-                            player<span style='color:#808030; '>.</span>do_action<span style='color:#808030; '>(</span>action<span style='color:#808030; '>,</span> <span style='color:#44aadd; '>**</span>action<span style='color:#808030; '>.</span>kwargs<span style='color:#808030; '>)</span>
-                            <span style='color:#800000; font-weight:bold; '>break</span>
-        </pre>
-        <!--Created using ToHtml.com on 2020-08-05 10:56:54 UTC -->
-        </p>
+        <div class="codeblock">
+            <p class="w3-center">
+                <pre style='color:#000000;background:#ffffff;'><span style='color:#800000; font-weight:bold; '>while</span> player<span style='color:#808030; '>.</span>is_alive<span style='color:#808030; '>(</span><span style='color:#808030; '>)</span> <span style='color:#800000; font-weight:bold; '>and</span> <span style='color:#800000; font-weight:bold; '>not</span> player<span style='color:#808030; '>.</span>victory<span style='color:#808030; '>:</span>
+                    room <span style='color:#808030; '>=</span> world<span style='color:#808030; '>.</span>get_tile<span style='color:#808030; '>(</span>player<span style='color:#808030; '>.</span>location_x<span style='color:#808030; '>,</span> player<span style='color:#808030; '>.</span>location_y<span style='color:#808030; '>)</span>
+                    room<span style='color:#808030; '>.</span>modify_player<span style='color:#808030; '>(</span>player<span style='color:#808030; '>)</span>
+                    <span style='color:#800000; font-weight:bold; '>if</span> player<span style='color:#808030; '>.</span>is_alive<span style='color:#808030; '>(</span><span style='color:#808030; '>)</span> <span style='color:#800000; font-weight:bold; '>and</span> <span style='color:#800000; font-weight:bold; '>not</span> player<span style='color:#808030; '>.</span>victory<span style='color:#808030; '>:</span>
+                        time<span style='color:#808030; '>.</span>sleep<span style='color:#808030; '>(</span><span style='color:#008c00; '>2</span><span style='color:#808030; '>)</span>
+                        <span style='color:#800000; font-weight:bold; '>print</span><span style='color:#808030; '>(</span><span style='color:#0000e6; '>"</span><span style='color:#0f69ff; '>\n</span><span style='color:#0000e6; '>===========================================</span><span style='color:#0f69ff; '>\n</span><span style='color:#0000e6; '>Choose an action:</span><span style='color:#0f69ff; '>\n</span><span style='color:#0000e6; '>"</span><span style='color:#808030; '>)</span>
+                        available_actions <span style='color:#808030; '>=</span> room<span style='color:#808030; '>.</span>available_actions<span style='color:#808030; '>(</span><span style='color:#808030; '>)</span>
+                        <span style='color:#800000; font-weight:bold; '>for</span> action <span style='color:#800000; font-weight:bold; '>in</span> available_actions<span style='color:#808030; '>:</span>
+                            <span style='color:#800000; font-weight:bold; '>print</span><span style='color:#808030; '>(</span>action<span style='color:#808030; '>)</span>
+                        action_input <span style='color:#808030; '>=</span> <span style='color:#400000; '>input</span><span style='color:#808030; '>(</span><span style='color:#0000e6; '>'Action: '</span><span style='color:#808030; '>)</span>
+                        <span style='color:#800000; font-weight:bold; '>print</span><span style='color:#808030; '>(</span><span style='color:#0000e6; '>"</span><span style='color:#0f69ff; '>\n</span><span style='color:#0f69ff; '>\n</span><span style='color:#0f69ff; '>\n</span><span style='color:#0f69ff; '>\n</span><span style='color:#0f69ff; '>\n</span><span style='color:#0f69ff; '>\n</span><span style='color:#0f69ff; '>\n</span><span style='color:#0000e6; '>"</span><span style='color:#808030; '>)</span>
+                        <span style='color:#800000; font-weight:bold; '>for</span> action <span style='color:#800000; font-weight:bold; '>in</span> available_actions<span style='color:#808030; '>:</span>
+                            <span style='color:#800000; font-weight:bold; '>if</span> action_input <span style='color:#44aadd; '>==</span> action<span style='color:#808030; '>.</span>hotkey<span style='color:#808030; '>:</span>
+                                player<span style='color:#808030; '>.</span>do_action<span style='color:#808030; '>(</span>action<span style='color:#808030; '>,</span> <span style='color:#44aadd; '>**</span>action<span style='color:#808030; '>.</span>kwargs<span style='color:#808030; '>)</span>
+                                <span style='color:#800000; font-weight:bold; '>break</span>
+                </pre>
+
+            <!--Created using ToHtml.com on 2020-08-05 10:56:54 UTC -->
+            </p>
+        </div>
         <p class="w3-center">
             This is the main loop of the game, the conditions for the game to continue are that the player is alive and the player has not yet won.
             If these conditions are met then we can get the tile that the player is on, and run the function of the tile, either giving the player an object 
             or giving the player an enemy to face off against. we are then going to check that the player is still alive and that they have not won the game. 
             The last part of a round is to give the player the curret options for that room, this could be attacking the enemy, or moving on to another room.
         </p>
-        <p class="w3-center">
-            <pre style='color:#000000;background:#ffffff;'><span style='color:#800000; font-weight:bold; '>class</span> Player<span style='color:#808030; '>(</span><span style='color:#808030; '>)</span><span style='color:#808030; '>:</span>
-                <span style='color:#800000; font-weight:bold; '>def</span> <span style='color:#074726; '>__init__</span><span style='color:#808030; '>(</span>self<span style='color:#808030; '>)</span><span style='color:#808030; '>:</span>
-                    self<span style='color:#808030; '>.</span>inventory <span style='color:#808030; '>=</span> <span style='color:#808030; '>[</span>items<span style='color:#808030; '>.</span>Rock<span style='color:#808030; '>(</span><span style='color:#808030; '>)</span><span style='color:#808030; '>]</span>
-                    self<span style='color:#808030; '>.</span>hp <span style='color:#808030; '>=</span> <span style='color:#008c00; '>100</span>
-                    self<span style='color:#808030; '>.</span>location_x<span style='color:#808030; '>,</span> self<span style='color:#808030; '>.</span>location_y <span style='color:#808030; '>=</span> world<span style='color:#808030; '>.</span>starting_position
-                    self<span style='color:#808030; '>.</span>victory <span style='color:#808030; '>=</span> <span style='color:#074726; '>False</span>
-            </pre>
-            <!--Created using ToHtml.com on 2020-08-05 11:00:06 UTC -->
-        </p>
+        <div class="codeblock">
+            <p class="w3-center">
+                <pre style='color:#000000;background:#ffffff;'><span style='color:#800000; font-weight:bold; '>class</span> Player<span style='color:#808030; '>(</span><span style='color:#808030; '>)</span><span style='color:#808030; '>:</span>
+                    <span style='color:#800000; font-weight:bold; '>def</span> <span style='color:#074726; '>__init__</span><span style='color:#808030; '>(</span>self<span style='color:#808030; '>)</span><span style='color:#808030; '>:</span>
+                        self<span style='color:#808030; '>.</span>inventory <span style='color:#808030; '>=</span> <span style='color:#808030; '>[</span>items<span style='color:#808030; '>.</span>Rock<span style='color:#808030; '>(</span><span style='color:#808030; '>)</span><span style='color:#808030; '>]</span>
+                        self<span style='color:#808030; '>.</span>hp <span style='color:#808030; '>=</span> <span style='color:#008c00; '>100</span>
+                        self<span style='color:#808030; '>.</span>location_x<span style='color:#808030; '>,</span> self<span style='color:#808030; '>.</span>location_y <span style='color:#808030; '>=</span> world<span style='color:#808030; '>.</span>starting_position
+                        self<span style='color:#808030; '>.</span>victory <span style='color:#808030; '>=</span> <span style='color:#074726; '>False</span>
+                </pre>
+                <!--Created using ToHtml.com on 2020-08-05 11:00:06 UTC -->
+            </p>
+        </div>
         <p class="w3-center">
             This is the player class, it defines the attributes of the player: Inventory, health points, Location, and victory satus.
         </p>
 
-        <p class="w3-center">
-            <pre style='color:#000000;background:#ffffff;'><span style='color:#800000; font-weight:bold; '>class</span> Item<span style='color:#808030; '>(</span><span style='color:#808030; '>)</span><span style='color:#808030; '>:</span>
-                <span style='color:#800000; font-weight:bold; '>def</span> <span style='color:#074726; '>__init__</span><span style='color:#808030; '>(</span>self<span style='color:#808030; '>,</span> name<span style='color:#808030; '>,</span> description<span style='color:#808030; '>,</span> found<span style='color:#808030; '>)</span><span style='color:#808030; '>:</span>
-                    self<span style='color:#808030; '>.</span>name <span style='color:#808030; '>=</span> name
-                    self<span style='color:#808030; '>.</span>description <span style='color:#808030; '>=</span> description
-            
-            <span style='color:#800000; font-weight:bold; '>class</span> Weapon<span style='color:#808030; '>(</span>Item<span style='color:#808030; '>)</span><span style='color:#808030; '>:</span>
-                <span style='color:#800000; font-weight:bold; '>def</span> <span style='color:#074726; '>__init__</span><span style='color:#808030; '>(</span>self<span style='color:#808030; '>,</span> name<span style='color:#808030; '>,</span> description<span style='color:#808030; '>,</span> found<span style='color:#808030; '>,</span> damage<span style='color:#808030; '>)</span><span style='color:#808030; '>:</span>
-                    self<span style='color:#808030; '>.</span>damage <span style='color:#808030; '>=</span> damage
-                    <span style='color:#400000; '>super</span><span style='color:#808030; '>(</span><span style='color:#808030; '>)</span><span style='color:#808030; '>.</span><span style='color:#074726; '>__init__</span><span style='color:#808030; '>(</span>name<span style='color:#808030; '>,</span> description<span style='color:#808030; '>,</span> found<span style='color:#808030; '>)</span>
-            
-            <span style='color:#800000; font-weight:bold; '>class</span> Food<span style='color:#808030; '>(</span>Item<span style='color:#808030; '>)</span><span style='color:#808030; '>:</span>
-                <span style='color:#800000; font-weight:bold; '>def</span> <span style='color:#074726; '>__init__</span><span style='color:#808030; '>(</span>self<span style='color:#808030; '>,</span> name<span style='color:#808030; '>,</span> description<span style='color:#808030; '>,</span> found<span style='color:#808030; '>,</span> value<span style='color:#808030; '>)</span><span style='color:#808030; '>:</span>
-                    self<span style='color:#808030; '>.</span>value <span style='color:#808030; '>=</span> value
-                    <span style='color:#400000; '>super</span><span style='color:#808030; '>(</span><span style='color:#808030; '>)</span><span style='color:#808030; '>.</span><span style='color:#074726; '>__init__</span><span style='color:#808030; '>(</span>name<span style='color:#808030; '>,</span> description<span style='color:#808030; '>,</span> found<span style='color:#808030; '>)</span>
-            </pre>
-            <!--Created using ToHtml.com on 2020-08-05 11:04:33 UTC -->
-        </p>
+        <div class="codeblock">
+            <p class="w3-center">
+                <pre style='color:#000000;background:#ffffff;'><span style='color:#800000; font-weight:bold; '>class</span> Item<span style='color:#808030; '>(</span><span style='color:#808030; '>)</span><span style='color:#808030; '>:</span>
+                    <span style='color:#800000; font-weight:bold; '>def</span> <span style='color:#074726; '>__init__</span><span style='color:#808030; '>(</span>self<span style='color:#808030; '>,</span> name<span style='color:#808030; '>,</span> description<span style='color:#808030; '>,</span> found<span style='color:#808030; '>)</span><span style='color:#808030; '>:</span>
+                        self<span style='color:#808030; '>.</span>name <span style='color:#808030; '>=</span> name
+                        self<span style='color:#808030; '>.</span>description <span style='color:#808030; '>=</span> description
+                
+                <span style='color:#800000; font-weight:bold; '>class</span> Weapon<span style='color:#808030; '>(</span>Item<span style='color:#808030; '>)</span><span style='color:#808030; '>:</span>
+                    <span style='color:#800000; font-weight:bold; '>def</span> <span style='color:#074726; '>__init__</span><span style='color:#808030; '>(</span>self<span style='color:#808030; '>,</span> name<span style='color:#808030; '>,</span> description<span style='color:#808030; '>,</span> found<span style='color:#808030; '>,</span> damage<span style='color:#808030; '>)</span><span style='color:#808030; '>:</span>
+                        self<span style='color:#808030; '>.</span>damage <span style='color:#808030; '>=</span> damage
+                        <span style='color:#400000; '>super</span><span style='color:#808030; '>(</span><span style='color:#808030; '>)</span><span style='color:#808030; '>.</span><span style='color:#074726; '>__init__</span><span style='color:#808030; '>(</span>name<span style='color:#808030; '>,</span> description<span style='color:#808030; '>,</span> found<span style='color:#808030; '>)</span>
+                
+                <span style='color:#800000; font-weight:bold; '>class</span> Food<span style='color:#808030; '>(</span>Item<span style='color:#808030; '>)</span><span style='color:#808030; '>:</span>
+                    <span style='color:#800000; font-weight:bold; '>def</span> <span style='color:#074726; '>__init__</span><span style='color:#808030; '>(</span>self<span style='color:#808030; '>,</span> name<span style='color:#808030; '>,</span> description<span style='color:#808030; '>,</span> found<span style='color:#808030; '>,</span> value<span style='color:#808030; '>)</span><span style='color:#808030; '>:</span>
+                        self<span style='color:#808030; '>.</span>value <span style='color:#808030; '>=</span> value
+                        <span style='color:#400000; '>super</span><span style='color:#808030; '>(</span><span style='color:#808030; '>)</span><span style='color:#808030; '>.</span><span style='color:#074726; '>__init__</span><span style='color:#808030; '>(</span>name<span style='color:#808030; '>,</span> description<span style='color:#808030; '>,</span> found<span style='color:#808030; '>)</span>
+                </pre>
+                <!--Created using ToHtml.com on 2020-08-05 11:04:33 UTC -->
+            </p>
+        </div>
         <p class="w3-center">
             This is the item class. Items are objects that can go into the player's inventory. The weapon class is based on the item class, adding 
             an attribute for the value of damage the weapon can do. The food class is also based upon the item class, adding the atttribute for food value.
         </p>
 
-        <p class="w3-center">
-            <pre style='color:#000000;background:#ffffff;'><span style='color:#800000; font-weight:bold; '>class</span> Enemy<span style='color:#808030; '>:</span>
-                <span style='color:#800000; font-weight:bold; '>def</span> <span style='color:#074726; '>__init__</span><span style='color:#808030; '>(</span>self<span style='color:#808030; '>,</span> name<span style='color:#808030; '>,</span> hp<span style='color:#808030; '>,</span> damage<span style='color:#808030; '>)</span><span style='color:#808030; '>:</span>
-                    self<span style='color:#808030; '>.</span>name <span style='color:#808030; '>=</span> name
-                    self<span style='color:#808030; '>.</span>hp <span style='color:#808030; '>=</span> hp
-                    self<span style='color:#808030; '>.</span>damage <span style='color:#808030; '>=</span> damage
-            </pre>
-            <!--Created using ToHtml.com on 2020-08-05 11:07:38 UTC -->
-        </p>
+        <div class="codeblock">
+            <p class="w3-center">
+                <pre style='color:#000000;background:#ffffff;'><span style='color:#800000; font-weight:bold; '>class</span> Enemy<span style='color:#808030; '>:</span>
+                    <span style='color:#800000; font-weight:bold; '>def</span> <span style='color:#074726; '>__init__</span><span style='color:#808030; '>(</span>self<span style='color:#808030; '>,</span> name<span style='color:#808030; '>,</span> hp<span style='color:#808030; '>,</span> damage<span style='color:#808030; '>)</span><span style='color:#808030; '>:</span>
+                        self<span style='color:#808030; '>.</span>name <span style='color:#808030; '>=</span> name
+                        self<span style='color:#808030; '>.</span>hp <span style='color:#808030; '>=</span> hp
+                        self<span style='color:#808030; '>.</span>damage <span style='color:#808030; '>=</span> damage
+                </pre>
+                <!--Created using ToHtml.com on 2020-08-05 11:07:38 UTC -->
+            </p>
+        </div>
+
         <p class="w3-center">
             This is the enemy class, it holds all the attributes that an enemy would have.
         </p>
-        <p class="w3-center">
-            <pre style='color:#000000;background:#ffffff;'><span style='color:#800000; font-weight:bold; '>class</span> Bob<span style='color:#808030; '>(</span>Enemy<span style='color:#808030; '>)</span><span style='color:#808030; '>:</span>
-                <span style='color:#800000; font-weight:bold; '>def</span> <span style='color:#074726; '>__init__</span><span style='color:#808030; '>(</span>self<span style='color:#808030; '>)</span><span style='color:#808030; '>:</span>
-                    <span style='color:#400000; '>super</span><span style='color:#808030; '>(</span><span style='color:#808030; '>)</span><span style='color:#808030; '>.</span><span style='color:#074726; '>__init__</span><span style='color:#808030; '>(</span>name<span style='color:#808030; '>=</span><span style='color:#0000e6; '>"Bob"</span><span style='color:#808030; '>,</span> hp <span style='color:#808030; '>=</span> <span style='color:#008c00; '>30</span><span style='color:#808030; '>,</span> damage<span style='color:#808030; '>=</span><span style='color:#008c00; '>5</span><span style='color:#808030; '>)</span>
-            </pre>
-            <!--Created using ToHtml.com on 2020-08-05 11:09:20 UTC -->
-        </p>
+        <div class="codeblock">
+            <p class="w3-center">
+                <pre style='color:#000000;background:#ffffff;'><span style='color:#800000; font-weight:bold; '>class</span> Bob<span style='color:#808030; '>(</span>Enemy<span style='color:#808030; '>)</span><span style='color:#808030; '>:</span>
+                    <span style='color:#800000; font-weight:bold; '>def</span> <span style='color:#074726; '>__init__</span><span style='color:#808030; '>(</span>self<span style='color:#808030; '>)</span><span style='color:#808030; '>:</span>
+                        <span style='color:#400000; '>super</span><span style='color:#808030; '>(</span><span style='color:#808030; '>)</span><span style='color:#808030; '>.</span><span style='color:#074726; '>__init__</span><span style='color:#808030; '>(</span>name<span style='color:#808030; '>=</span><span style='color:#0000e6; '>"Bob"</span><span style='color:#808030; '>,</span> hp <span style='color:#808030; '>=</span> <span style='color:#008c00; '>30</span><span style='color:#808030; '>,</span> damage<span style='color:#808030; '>=</span><span style='color:#008c00; '>5</span><span style='color:#808030; '>)</span>
+                </pre>
+                <!--Created using ToHtml.com on 2020-08-05 11:09:20 UTC -->
+            </p>
+        </div>
+        
         <p class="w3-center">
             This is Bob, one of our enemies. Inside Bob we have defined his name, health points and his damage rating.
         </p>
