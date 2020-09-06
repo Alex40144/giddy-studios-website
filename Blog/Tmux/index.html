@@ -1,7 +1,7 @@
 <!-- Made By Alex -->
 <!DOCTYPE html>
 <html>
-<title>How to use Tmux</title>
+<title>Tmux - Giddy Studios</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -48,7 +48,7 @@
     <!-- Container (Put stuff here) -->
     <div class="w3-content w3-container w3-padding-64">
         <h2 class="w3-center">Tmux</h2>
-        <p class="w3-center">A tool for creating persistent comand line interfaces.</p>
+        <p class="w3-center">A tool for creating persistent multiple terminals in one</p>
     </div>
 
     <div class="row">
@@ -56,12 +56,97 @@
             <div class="card">
                 <h2> Overview </h2>
                 <p>
-                    Ever wanted to start a program and leave it running when you have closed the ssh shell?
-                    Well this is your solution.
+                    Ever wanted to start a program and leave it running when you have closed the ssh connection?
+                    Well this is your solution. 
+                    <br>
+                    Tmux is a terminal multiplexer, it lets you switch between terminals 
+                    and keep them running in the background.
+                </p>
+            </div>
+
+            <div class="card">
+                <h2> Installing</h2>
+                <div class="codeblock">
+                    <p>
+                        sudo apt-get install tmux
+                    </p>
+                </div>
+                <p>
+                    Quite simple so far!
                 </p>
             </div>
             <div class="card">
+                <h2> Basic usage</h2>
+                <div class="subcard">
+                    <h2> Creating a Terminal session</h2>
+                    <div class="codeblock">
+                        <p>
+                            tmux new -s [terminal name]
+                        </p>
+                    </div>
+                    <p>
+                        This will create a terminal session called [terminal name]
+                    </p>
+                </div>
+                <div class="subcard">
+                    <h2> Show a list of Terminal sessions</h2>
+                    <div class="codeblock">
+                        <p>
+                            tmux ls
+                        </p>
+                    </div>
+                    <p>
+                        Could it be any simpler?
+                    </p>
+                </div>
+                <div class="subcard">
+                    <h2> Attaching to a Terminal session</h2>
+                    <div class="codeblock">
+                        <p>
+                            tmux attach -t [terminal name]
+                        </p>
+                    </div>
+                    <p>
+                        This will join the terminal session called [terminal name]
+                    </p>
+                </div>
+                <div class="subcard">
+                    <h2> Dettaching from a Terminal session</h2>
+                    <div class="codeblock">
+                        <p>
+                            Ctrl-B D
+                        </p>
+                    </div>
+                    <p>
+                        This is a funny one. To exit from a session you need to press Ctrl-B and then press D.
+                        This will return you back to the local terminal on the device.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2> Windows </h2>
+                <p>
+
+                </p>
+                <div class="subcard">
+                    
+                </div>
+            </div>
+
+            <div class="card">
+                <h2> Panes </h2>
+                <div class="subcard">
+
+                </div>
+            </div>
+
+            <div class="card">
                 <h2>Conclusion</h2>
+                <p>
+                    On the surface Tmux is a very simple and useful tool. But as we delve into the features, Tmux becomes a 
+                    very powerful tool for controlling multiple terminals at once.
+                </p>
             </div>
         </div>
         <div class="rightblogcolumn">
