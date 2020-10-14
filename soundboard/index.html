@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Soundboard</title>
+  <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script data-ad-client="ca-pub-7335793688887222" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-150931831-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-150931831-3');
+</script>
+
+<body>
+  
+  <div class="drumKit">
+      <img src="images/snareDrum.png" data-drum="snareDrum" class="drum" data-key="68">
+      <img src="images/hihat.png" data-drum="hihat" class="drum" data-key="74">
+      <img src="images/highTom.png" data-drum="highTom" class="drum" data-key="82">
+      <img src="images/floorTom.png" data-drum="floorTom" class="drum" data-key="87">
+      <img src="images/bassDrum.png" data-drum="bassDrum" class="drum" data-key="65">
+      <img src="images/crash2.png" data-drum="crash2" class="drum" data-key="85">
+      <img src="images/crash1.png" data-drum="crash1" class="drum" data-key="73">
+  </div>
+
+  <audio data-key="74" src="sounds/hihat.wav"></audio>
+  <audio data-key="65" src="sounds/kick.wav"></audio>
+  <audio data-key="68" src="sounds/snare.wav"></audio>
+  <audio data-key="73" src="sounds/crash1.wav"></audio>
+  <audio data-key="85" src="sounds/crash2.wav"></audio>
+  <audio data-key="87" src="sounds/floorTom.wav"></audio>
+  <audio data-key="82" src="sounds/highTom.wav"></audio>
+
+  <script text="text/javascript" src="script.js"></script>
+</body>
+</html>
