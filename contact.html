@@ -1,0 +1,56 @@
+<!-- Made By Alex -->
+<!DOCTYPE html>
+<html>
+<title>Alex Pegg</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+<link rel="stylesheet" href="./style.css">
+
+<link rel="shortcut icon" type="image/x-icon" href="./images/favicon.ico"/>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script data-ad-client="ca-pub-7335793688887222" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-150931831-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-150931831-3');
+</script>
+
+<meta charset="UTF-8"> 
+<meta name="description" content="Portfolio for all of my projects"> 
+<meta name="keywords" content=""> 
+
+<body>
+
+    <!--Navigation bar-->
+    <div id="nav-placeholder">    </div>
+
+    <script>
+        $.get("navbar.html", function(data){
+            $("#nav-placeholder").replaceWith(data);
+        });
+        </script>
+
+
+    <p style="margin-left: 2.5em;padding: 0 7em 1em 0;"></p>
+
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSerXWyWvdi_nebWaGAU9OmrJE6Ff4mQ3PP4xxWuP5fLVTU0cg/viewform?embedded=true" width="640" height="705" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
+    <!--Footer-->
+    <div id="footer-placeholder">    </div>
+
+    <script>
+        $.get("/footer.html", function(data){
+            $("#footer-placeholder").replaceWith(data);
+        });
+    </script>
+
+</body>
+</html>
