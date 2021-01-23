@@ -31,7 +31,7 @@
     <!--Navigation bar-->
     <div id="nav-placeholder">    </div>
     <script>
-        $.get("/navbar.html", function(data){
+        $.get("./navbar.html", function(data){
             $("#nav-placeholder").replaceWith(data);
         });
     </script>
@@ -132,7 +132,7 @@
     <div id="footer-placeholder">    </div>
 
     <script>
-        $.get("/footer.html", function(data){
+        $.get("./footer.html", function(data){
             $("#footer-placeholder").replaceWith(data);
         });
     </script>
