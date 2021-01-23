@@ -1,0 +1,114 @@
+<!-- Made By Alex -->
+<!DOCTYPE html>
+<html>
+<title>Auto Factorio - Alex Pegg</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+<link rel="stylesheet" href="/style.css">
+
+<link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico"/>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script data-ad-client="ca-pub-7335793688887222" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-150931831-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-150931831-1');
+</script>
+
+<meta charset="UTF-8"> 
+<meta name="description" content="Portfolio for all of my projects"> 
+<meta name="keywords" content=""> 
+
+<body>
+
+    <!--Navigation bar-->
+    <div id="nav-placeholder">    </div>
+
+    <script>
+        $.get("/navbar.html", function(data){
+            $("#nav-placeholder").replaceWith(data);
+        });
+        </script>
+
+
+    <p style="margin-left: 2.5em;padding: 0 7em 1em 0;"></p>
+
+    <!-- Parallax Image -->
+    <div class="parallax w3-display-container w3-opacity-min" id="home">
+        <div class="w3-display-middle" style="white-space:nowrap;">
+            <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">GIDDY  <span class="w3-hide-small"></span>STUDIOS</span>
+        </div>
+    </div>
+
+    <!-- Container (Put stuff here) -->
+    <div class="w3-content w3-container w3-padding-64">
+        <h3 class="w3-center">Auto Factorio</h3>
+        <p class="w3-center"><em>A script that automates the game all about automation</em></p>
+    </div>
+
+    <!-- Parallax Image -->
+    <div class="parallax w3-display-container w3-opacity-min" id="overview">
+        <div class="w3-display-middle" style="white-space:nowrap;">
+            <span class="w3-xxlarge w3-text-white w3-wide">Overview</span>
+        </div>
+    </div>
+
+    <!-- Container (Put stuff here) -->
+    <div class="w3-content w3-container w3-padding-64">
+        <p class="w3-center">
+            This code relies on a list of instructions that it performs, I am not that good at programming, I can't just give it a brain quite yet!
+        </p>
+    </div>
+
+    <!-- Parallax Image -->
+    <div class="parallax w3-display-container w3-opacity-min" id="walk-through">
+        <div class="w3-display-middle" style="white-space:nowrap;">
+            <span class="w3-xxlarge w3-text-white w3-wide">Walk through</span>
+        </div>
+    </div>
+    <!-- Container (Put stuff here) -->
+    <div class="w3-content w3-container w3-padding-64">
+        <p class="w3-center">
+            some more text
+        </p>
+    </div>
+
+    <!-- Parallax Image -->
+    <div class="parallax w3-display-container w3-opacity-min" id="open-source">
+        <div class="w3-display-middle" style="white-space:nowrap;">
+            <span class="w3-xxlarge w3-text-white w3-wide">Open Source</span>
+        </div>
+    </div>
+    <!-- Container (Put stuff here) -->
+    <div class="w3-content w3-container w3-padding-64" id="about">
+        <p class="w3-center">
+            As always, my projects are open source, so please take them, modify and improve them and share them with your friends 
+            to prove you are the better friend
+        </p>
+        <h3 class="w3-center"><a href="https://github.com/Alex40144/AutoFactorio">Find the code on Github</a></h3>
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+        <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+        <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+    </footer>
+
+    <!--Footer-->
+    <div id="footer-placeholder">    </div>
+
+    <script>
+        $.get("/footer.html", function(data){
+            $("#footer-placeholder").replaceWith(data);
+        });
+    </script>
+</body>
+</html>
