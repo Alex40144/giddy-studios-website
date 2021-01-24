@@ -8,9 +8,9 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 
-<link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="/style.css">
 
-<link rel="shortcut icon" type="image/x-icon" href="./images/favicon.ico"/>
+<link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico"/>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script data-ad-client="ca-pub-7335793688887222" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -33,7 +33,7 @@
     <div id="nav-placeholder">    </div>
 
     <script>
-        $.get("navbar.html", function(data){
+        $.get("/navbar.html", function(data){
             $("#nav-placeholder").replaceWith(data);
         });
         </script>
@@ -89,33 +89,33 @@
         <div class="leftblogcolumn">
             <div class="card">
                 <h2 onclick="location.href='./Scalextric'" class="w3-hover-opacity">Internet connected Scalextric</h2>
-                <img src="./images/scalextric.jpg" style="height: 200px" onclick="location.href='./Scalextric'" class="w3-hover-opacity" alt="Scalextric">
+                <img src="/images/scalextric.jpg" style="height: 200px" onclick="location.href='./Scalextric'" class="w3-hover-opacity" alt="Scalextric">
             </div>
 
             <div class="card">
                 <h2 onclick="location.href='./Text-Adventure'" class="w3-hover-opacity">Text Adventure Game</h2>
-                <img src="./images/Text-Adventure.png" style="height: 200px" onclick="location.href='./Text-Adventure'" class="w3-hover-opacity" alt="">
+                <img src="/images/Text-Adventure.png" style="height: 200px" onclick="location.href='./Text-Adventure'" class="w3-hover-opacity" alt="">
             </div>
 
             <div class="card">
                 <h2 onclick="location.href='./LED-Clock'" class="w3-hover-opacity">LED Clock</h2>
-                <img src="./images/LED-Clock.jpg" style="height: 200px" onclick="location.href='./LED-Clock'" class="w3-hover-opacity" alt="">
+                <img src="/images/LED-Clock.jpg" style="height: 200px" onclick="location.href='./LED-Clock'" class="w3-hover-opacity" alt="">
             </div>
             <div class="card">
-                <h2 onclick="location.href='./AutoFactorio'" class="w3-hover-opacity">Auto Factorio</h2>
+                <h2 onclick="location.href='/AutoFactorio'" class="w3-hover-opacity">Auto Factorio</h2>
             </div>
         </div>
         <div class="rightblogcolumn">
             <div class="card">
                 <h2> Blog Posts</h2>
                 <div class="subcard">
-                    <h3 onclick="location.href='./Blog/VirtualEnv/index.html'" class="w3-hover-opacity">Creating and Managing Virtual Enviroments in Python</h3>
+                    <h3 onclick="location.href='/Blog/VirtualEnv/index.html'" class="w3-hover-opacity">Creating and Managing Virtual Enviroments in Python</h3>
                 </div>
                 <div class="subcard">
-                    <h3 onclick="location.href='./WellDone/index.html'" class="w3-hover-opacity">Well Done</h3>
+                    <h3 onclick="location.href='/WellDone/index.html'" class="w3-hover-opacity">Well Done</h3>
                 </div>
                 <div class="subcard">
-                    <h3 onclick="location.href='./soundboard/index.html'" class="w3-hover-opacity">soundboard</h3>
+                    <h3 onclick="location.href='/soundboard/index.html'" class="w3-hover-opacity">soundboard</h3>
                 </div>
             </div>
         </div>
@@ -131,7 +131,7 @@
     <!-- Container (Contact Section) -->
     <div class="w3-content w3-container w3-padding-64">
         <div class="subcard">
-            <h3 onclick="location.href='./contact.html'" class="w3-hover-opacity">This Button</h3>
+            <h3 onclick="location.href='/contact.html'" class="w3-hover-opacity">This Button</h3>
         </div>
     </div>
 
@@ -139,7 +139,7 @@
     <div id="footer-placeholder">    </div>
 
     <script>
-        $.get("footer.html", function(data){
+        $.get("/footer.html", function(data){
             $("#footer-placeholder").replaceWith(data);
         });
     </script>
